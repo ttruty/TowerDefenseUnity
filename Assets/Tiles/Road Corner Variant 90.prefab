@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4065286174218380833, guid: 97b157bc371174e5ebf8c0286def5b89, type: 3}
       propertyPath: m_Name
-      value: (0, 0)
+      value: Road Corner Variant 90
       objectReference: {fileID: 0}
     - target: {fileID: 4105598962459846532, guid: 97b157bc371174e5ebf8c0286def5b89, type: 3}
       propertyPath: m_RootOrder
