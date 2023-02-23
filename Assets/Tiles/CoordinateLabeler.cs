@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+[RequireComponent(typeof(TextMeshPro))]
+
 [ExecuteAlways]
 public class CoordinateLabeler : MonoBehaviour
 {
     [SerializeField] Color defaultColor = Color.white;
     [SerializeField] Color blockedColor = Color.gray;
-
     private TextMeshPro _label;
     private Vector2Int _coordinates = new Vector2Int();
     Waypoint waypoint;
@@ -31,7 +32,7 @@ public class CoordinateLabeler : MonoBehaviour
             DisplayCoordinates();
             UpdateObjectName();
         }
-        ColorCoordiantes();
+        SetLabelColor();
         ToggleLabels();
         
     }
@@ -42,7 +43,7 @@ public class CoordinateLabeler : MonoBehaviour
         }
     }
 
-    void ColorCoordiantes() {
+    void SetLabelColor() {
         if (waypoint.IsPlaceable) {
             _label.color = defaultColor;
         } else {
